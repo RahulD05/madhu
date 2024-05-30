@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moon Love</title>
+<style>
+  body {
+    font-family: 'Gillroy', Arial, sans-serif;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000;
+    color: #fff;
+  }
+  h2 {
+    font-size: 34px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 16px;
+  }
+  select {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #fff;
+  }
+  .imgcontainer {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  #moon {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    filter: blur(10px);
+    transition: filter 0.5s ease;
+  }
+  @media (max-width: 600px) {
+    h2 {
+      font-family: "Gillroy";
+      font-size: 24px;
+    }
+    p, select {
+      font-family: "Gillroy";
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2>Would you like to see the moon?</h2>
+<p>(The moon seems pretty in 4k Ultra HD version!)</p>
+<select id="blurSelector" onchange="changeBlur()">
+  <option value="10">144p</option>
+  <option value="8">360p</option>
+  <option value="5">720p</option>
+  <option value="0">4k Ultra HD</option>
+</select>
+<div class="imgcontainer">
+    <img id="moon" src="./FullMoon2010.jpg.webp" alt="Moon">
+</div>
+
+<script>
+  function changeBlur() {
+    var blurValue = document.getElementById("blurSelector").value;
+    document.getElementById("moon").style.filter = "blur(" + blurValue + "px)";
+    if (blurValue == 0) {
+      window.location.href = "./Snapchat-1665560427.jpg";
+    }
+  }
+</script>
+
+</body>
+</html>

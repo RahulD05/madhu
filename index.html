@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Test</title>
+<style>
+  body {
+    font-family: 'Gillroy', Arial, sans-serif;
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 34px;
+    font-weight: 500;
+    background-color: #F88C8C;
+  }
+  #moon {
+    filter: blur(10px);
+    transition: filter 0.5s ease;
+  }
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  button {
+    height: 40px;
+    width: 100px;
+    background-color: transparent;
+    border: 1px solid #333;
+    margin: 20px;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  @media (max-width: 600px) {
+    body {
+        font-family: "Gillroy";
+      font-size: 24px;
+      padding: 50px 10px;
+    }
+    button {
+      height: 30px;
+      width: 80px;
+      font-family: "Gillroy";
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2>Do you love me?</h2>
+<button onclick="checkLove('yes')">Yes</button>
+<button onclick="checkLove('no')">No</button>
+<div class="imgcontainer">
+    <img src="./kitty.png" alt="Kitty">
+</div>
+
+<script>
+  function checkLove(answer) {
+    if (answer === 'no') {
+      window.location.href = "moon.html";
+    } else {
+      window.location.href = "thankyou.html";
+    }
+  }
+</script>
+
+</body>
+</html>
